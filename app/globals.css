@@ -123,6 +123,10 @@
 
 
 @layer utilities{
+  .container{
+    @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
+  }
+  
   .home_wrapper{
     @apply text-gray-400 flex-col gap-4 md:gap-10 items-center sm:items-start;
   }

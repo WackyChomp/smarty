@@ -6,7 +6,7 @@ const layout = ({children}: {children : React.ReactNode}) => {
     <main className='min-h-screen text-gray-400'>
 
       <Header />      {/* (will appear in every single page within root route group) */}
-      
+
       <div className="container py-10">
         {children}
       </div>
