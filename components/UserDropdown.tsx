@@ -3,6 +3,11 @@
 import React from 'react'
 import { Button } from './ui/button'
 import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -17,7 +22,10 @@ const UserDropdown = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' className='flex items-center gap-3 text-yellow-900 hover:text-yellow-500'>
-          
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
         </Button>
       </DropdownMenuTrigger>
 
