@@ -5,40 +5,18 @@ import React, { useEffect, useRef, memo } from 'react';
 
 // Source-- https://www.tradingview.com/widget-docs/widgets/charts/advanced-chart/
 
-function TradingViewWidget() {
-  const container = useRef();
 
+const TradingViewWidget = () => {
+  const container = useRef(null);
+
+  //turn into reusable hook to render different charts
   useEffect(
     () => {
       const script = document.createElement("script");
       script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
       script.type = "text/javascript";
       script.async = true;
-      script.innerHTML = `
-        {
-          "allow_symbol_change": true,
-          "calendar": false,
-          "details": false,
-          "hide_side_toolbar": true,
-          "hide_top_toolbar": false,
-          "hide_legend": false,
-          "hide_volume": false,
-          "hotlist": false,
-          "interval": "D",
-          "locale": "en",
-          "save_image": true,
-          "style": "1",
-          "symbol": "NASDAQ:AAPL",
-          "theme": "light",
-          "timezone": "Etc/UTC",
-          "backgroundColor": "#ffffff",
-          "gridColor": "rgba(46, 46, 46, 0.06)",
-          "watchlist": [],
-          "withdateranges": false,
-          "compareSymbols": [],
-          "studies": [],
-          "autosize": true
-        }`;
+      script.innerHTML = ``
       container.current.appendChild(script);
     },
     []
