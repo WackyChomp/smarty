@@ -112,6 +112,9 @@
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
+
+/* ------------------------------------------------------------ */
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -121,6 +124,8 @@
   }
 }
 
+
+/* ------------------------------------------------------------ */
 
 @layer utilities{
   .container{
@@ -141,4 +146,19 @@
   .header_wrapper {
     @apply text-gray-500 flex justify-between items-center px-6 py-4;
   }
+}
+
+
+/* ------------------------------------------------------------ */
+.tradingview_widget_container {
+  position: relative;
+  background-color: #d17272 !important;        /* #141414 */
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.tradingview_widget_container_widget {
+  background-color: #e6c81e !important;           /* #141414 */
+  height: 100% !important;
+
 }

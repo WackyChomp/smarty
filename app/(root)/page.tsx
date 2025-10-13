@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import TradingViewWidget from "@/components/TradingViewWidget"
-import { MARKET_OVERVIEW_WIDGET_CONFIG } from "@/lib/constants"
+import { MARKET_OVERVIEW_WIDGET_CONFIG_ONE, MARKET_OVERVIEW_WIDGET_CONFIG_TWO } from "@/lib/constants"
 
 // chart types
 // https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js
@@ -14,7 +14,7 @@ const Home = () => {
           <TradingViewWidget 
             title='General Market'
             scriptUrl='https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js'
-            config={MARKET_OVERVIEW_WIDGET_CONFIG}
+            config={MARKET_OVERVIEW_WIDGET_CONFIG_TWO}
             className=""
             height={600}
           />
