@@ -50,6 +50,49 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG_TWO = {
     belowLineFillColorGrowingBottom: 'rgba(41, 98, 255, 0)',
     belowLineFillColorFallingBottom: 'rgba(41, 98, 255, 0)',
     symbolActiveColor: 'rgba(15, 237, 190, 0.05)', // highlight color for active symbol
+    tabs: [
+      {
+        title: 'Financial',
+        symbols: [
+          { s: 'NYSE:JPM', d: 'JPMorgan Chase' },
+          { s: 'NYSE:WFC', d: 'Wells Fargo & Co' },
+          { s: 'NYSE:BAC', d: 'Bank of America Corp' },
+          { s: 'NYSE:HSBC', d: 'HSBC Holdings Plc' },
+          { s: 'NYSE:C', d: 'Citigroup Inc' },
+          { s: 'NYSE:MA', d: 'Mastercard Incorporated' },
+          { s: 'NYSE:V', d: 'Visa' },
+          //{ s: 'NYSE:', d: '' },
+        ],
+      },
+      {
+        title: 'Technology',
+        symbols: [
+          { s: 'NASDAQ:AMZN', d: 'Amazon' },
+          { s: 'NASDAQ:AAPL', d: 'Apple' },
+          { s: 'NASDAQ:GOOGL', d: 'Alphabet' },
+          { s: 'NASDAQ:MSFT', d: 'Microsoft' },
+          { s: 'NASDAQ:NFLX', d: 'Netflix' },
+          { s: 'NASDAQ:META', d: 'Meta Platforms' },
+          { s: 'NASDAQ:TSLA', d: 'Tesla Inc' },
+          { s: 'NYSE:ORCL', d: 'Oracle Corp' },
+          { s: 'NASDAQ:PLTR', d: 'Palantir Technologies Inc' },
+          //{ s: 'NASDAQ:', d: '' },
+        ],
+      },
+      {
+        title: 'Services',
+        symbols: [
+          { s: 'NYSE:BABA', d: 'Alibaba Group Holdings Ltd' },
+          { s: 'NYSE:T', d: 'AT&T Inc' },
+          { s: 'NYSE:WMT', d: 'Walmart' },
+          { s: 'NYSE:PG', d: 'Procter & Gamble Co' },
+          { s: 'NYSE:HD', d: 'Home Depot Inc' },
+          { s: 'NYSE:KO', d: 'Coca-Cola Co' },
+          { s: 'NYSE:JNJ', d: 'Johnson & Johnson' },
+          //{ s: 'NYSE:', d: '' },
+        ],
+      },
+    ],
     support_host: 'https://www.tradingview.com', // TradingView host
     backgroundColor: '#141414', // background color
     width: '100%', // full width
