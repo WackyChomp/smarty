@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button"
 import TradingViewWidget from "@/components/TradingViewWidget"
-import { MARKET_OVERVIEW_WIDGET_CONFIG_ONE, MARKET_OVERVIEW_WIDGET_CONFIG_TWO } from "@/lib/constants"
+import { 
+  MARKET_OVERVIEW_WIDGET_CONFIG_ONE, 
+  MARKET_OVERVIEW_WIDGET_CONFIG_TWO, 
+  HEATMAP_WIDGET_CONFIG,
+  LATEST_STORIES_WIDGET_CONFIG,
+} from "@/lib/constants"
 
 // chart types
 // https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js
@@ -28,7 +33,7 @@ const Home = () => {
           <TradingViewWidget 
             title='Stock Heatmap'
             scriptUrl={`${scriptUrl}stock-heatmap.js`}
-            config={MARKET_OVERVIEW_WIDGET_CONFIG_TWO}
+            config={HEATMAP_WIDGET_CONFIG}
             className=""
             height={600}
           />          
@@ -44,7 +49,7 @@ const Home = () => {
           <TradingViewWidget 
             title='Stories'
             scriptUrl={`${scriptUrl}timeline.js`}
-            config={MARKET_OVERVIEW_WIDGET_CONFIG_TWO}
+            config={LATEST_STORIES_WIDGET_CONFIG}
             className=""
             height={600}
           />

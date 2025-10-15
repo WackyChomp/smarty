@@ -102,3 +102,33 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG_TWO = {
   }
 
 /* ------------------------------------------------------------------------- */
+
+export const HEATMAP_WIDGET_CONFIG = {
+  dataSource: 'SPX500',
+  blockSize: 'market_cap_basic',
+  blockColor: 'change',
+  grouping: 'sector',
+  isTransparent: true,
+  locale: 'en',
+  symbolUrl: '',
+  colorTheme: 'dark',
+  exchanges: [],
+  hasTopBar: false,
+  isDataSetEnabled: false,
+  isZoomEnabled: true,
+  hasSymbolTooltip: true,
+  isMonoSize: false,
+  width: '100%',
+  height: '600',
+};
+
+export const LATEST_STORIES_WIDGET_CONFIG = {
+  displayMode: 'regular',
+  feedMode: 'market',
+  colorTheme: 'dark',
+  isTransparent: true,
+  locale: 'en',
+  market: 'stock',
+  width: '100%',
+  height: '600',
+};
