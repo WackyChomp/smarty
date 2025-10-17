@@ -5,6 +5,7 @@ import {
   MARKET_OVERVIEW_WIDGET_CONFIG_TWO, 
   HEATMAP_WIDGET_CONFIG,
   LATEST_STORIES_WIDGET_CONFIG,
+  MARKET_DATA_WIDGET_CONFIG
 } from "@/lib/constants"
 
 // chart types
@@ -60,7 +61,7 @@ const Home = () => {
           <TradingViewWidget 
             title='General Quotes'
             scriptUrl={`${scriptUrl}market-quotes.js`}
-            config={MARKET_OVERVIEW_WIDGET_CONFIG_TWO}
+            config={MARKET_DATA_WIDGET_CONFIG}
             className=""
             height={600}
           />          

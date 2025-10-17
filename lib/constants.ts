@@ -132,3 +132,60 @@ export const LATEST_STORIES_WIDGET_CONFIG = {
   width: '100%',
   height: '600',
 };
+
+
+export const MARKET_DATA_WIDGET_CONFIG = {
+  title: 'Stocks',
+  width: '100%',
+  height: 600,
+  locale: 'en',
+  showSymbolLogo: true,
+  colorTheme: 'dark',
+  isTransparent: false,
+  backgroundColor: '#0F0F0F',
+  symbolsGroups: [
+    {
+      title: 'Financial',
+      symbols: [
+        { name: 'NYSE:JPM', displayName: 'JPMorgan Chase' },
+        { name: 'NYSE:WFC', displayName: 'Wells Fargo & Co' },
+        { name: 'NYSE:BAC', displayName: 'Bank of America Corp' },
+        { name: 'NYSE:HSBC', displayName: 'HSBC Holdings Plc' },
+        { name: 'NYSE:C', displayName: 'Citigroup Inc' },
+        { name: 'NYSE:MA', displayName: 'Mastercard Incorporated' },
+        { name: 'NYSE:V', displayName: 'Visa' },
+        //{ name: 'NYSE:', displayName: '' },
+      ],
+    },
+    {
+      name: 'Technology',
+      symbols: [
+        { name: 'NASDAQ:AMZN', displayName: 'Amazon' },
+        { name: 'NASDAQ:AAPL', displayName: 'Apple' },
+        { name: 'NASDAQ:GOOGL', displayName: 'Alphabet' },
+        { name: 'NASDAQ:MSFT', displayName: 'Microsoft' },
+        { name: 'NASDAQ:NFLX', displayName: 'Netflix' },
+        { name: 'NASDAQ:META', displayName: 'Meta Platforms' },
+        { name: 'NASDAQ:TSLA', displayName: 'Tesla Inc' },
+        { name: 'NYSE:ORCL', displayName: 'Oracle Corp' },
+        { name: 'NASDAQ:PLTR', displayName: 'Palantir Technologies Inc' },
+        //{ name: 'NASDAQ:', displayName: '' },
+      ],
+    },
+    {
+      name: 'Services',
+      symbols: [
+        { name: 'NYSE:BABA', displayName: 'Alibaba Group Holdings Ltd' },
+        { name: 'NYSE:T', displayName: 'AT&T Inc' },
+        { name: 'NYSE:WMT', displayName: 'Walmart' },
+        { name: 'NYSE:PG', displayName: 'Procter & Gamble Co' },
+        { name: 'NYSE:HD', displayName: 'Home Depot Inc' },
+        { name: 'NYSE:KO', displayName: 'Coca-Cola Co' },
+        { name: 'NYSE:JNJ', displayName: 'Johnson & Johnson' },
+        //{ name: 'NYSE:', displayName: '' },
+      ],
+    },
+
+  ]
+  
+}
