@@ -101,7 +101,6 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG_TWO = {
     showChart: true, // display mini chart
   }
 
-/* ------------------------------------------------------------------------- */
 
 export const HEATMAP_WIDGET_CONFIG = {
   dataSource: 'SPX500',
@@ -187,5 +186,9 @@ export const MARKET_DATA_WIDGET_CONFIG = {
     },
 
   ]
-  
 }
+
+/* ------------------------------------------------------------------------- */
+
+
+
