@@ -131,7 +131,26 @@
   .container{
     @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
   }
-  
+
+  .auth_layout {
+    @apply bg-gray-600 flex flex-col justify-between lg:flex-row h-screen relative overflow-hidden;
+  }
+  .auth_logo {
+    @apply pt-6 lg:pt-8 mb-8 lg:mb-12;
+  }
+  .auth_left_section {
+    @apply w-full lg:w-[45%] lg:h-screen px-6 lg:px-16 flex flex-col overflow-y-auto;
+  }
+  .auth_right_section {
+    @apply w-full max-lg:border-t max-lg:border-gray-600 lg:w-[55%] lg:h-screen bg-gray-800 px-6 py-4 md:p-6 lg:py-12 lg:px-18 flex flex-col justify-start;
+  }
+  .auth_testimonial_author {
+    @apply text-yellow-400 text-xs md:text-lg font-bold not-italic;
+  }
+  .auth_dashboard_preview {
+    @apply border-6 border-red-800 left-0 hidden w-[1024px] h-auto max-w-none lg:block rounded-xl shadow-2xl;
+  }
+
   .home_wrapper{
     @apply text-gray-400 flex-col gap-4 md:gap-10 items-center sm:items-start;
   }
