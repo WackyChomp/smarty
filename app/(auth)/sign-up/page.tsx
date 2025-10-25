@@ -70,7 +70,7 @@ const SignUp = () => {
         required
       />
 
-      <Button type='submit' disabled={isSubmitting} className='bg-orange-400 w-full mt-5'>
+      <Button type='submit' disabled={isSubmitting} className='yellow_button w-full mt-5'>
         {isSubmitting ? 'Creating Account' : 'Commence Your Journey'}
       </Button>
     </form>

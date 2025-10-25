@@ -6,7 +6,7 @@ import { Input } from '../ui/input'
 const InputField = ({ name, label, placeholder, type='text', register, error, disabled, value, validation} : FormInputProps) => {
   return (
     <div className='space-y-2'>
-      <Label htmlFor={name}>
+      <Label htmlFor={name} className='form_label'>
         {label}
       </Label>
       <Input 
@@ -15,7 +15,7 @@ const InputField = ({ name, label, placeholder, type='text', register, error, di
         placeholder={placeholder}
         disabled={disabled}
         value={value}
-        className={cn('',{'opacity-50 cursor-not-allowed' : disabled})}
+        className={cn('form_input',{'opacity-50 cursor-not-allowed' : disabled})}
         {...register(name, validation)}
       />
 

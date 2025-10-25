@@ -132,6 +132,21 @@
     @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
   }
 
+  .yellow_button {
+    @apply h-12 cursor-pointer bg-gradient-to-b from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-gray-950 font-medium text-base rounded-lg shadow-lg disabled:opacity-50;
+  }
+
+  .form_input{
+    @apply h-12 px-3 py-3 text-white text-base placeholder:text-gray-500 border-gray-600 bg-gray-800 rounded-lg focus:!border-yellow-500 focus:ring-0;
+  }
+  .form_label{
+    @apply text-sm font-medium text-gray-400;
+  }
+
+  .select_trigger{
+    @apply w-full !h-12 px-3 py-3 text-base border-gray-600 bg-gray-800 text-white rounded-lg focus:!border-yellow-500 focus:ring-0;
+  }
+
   .auth_layout {
     @apply bg-gray-600 flex flex-col justify-between lg:flex-row h-screen relative overflow-hidden;
   }
