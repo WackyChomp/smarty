@@ -196,3 +196,20 @@
   height: 100% !important;
 
 }
+
+
+.scrollbar_hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar_hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar_hide_default {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.scrollbar_hide_default::-webkit-scrollbar {
+  width: 8px;
+}

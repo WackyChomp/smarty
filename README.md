@@ -29,6 +29,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#built-with">Built With</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -45,6 +46,27 @@ This section includes a list major frameworks/libraries used in this project:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments 
+🌟🤗🌟
+
+List of incredible resources that give you inspiration or point you into a direction:
+
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Emojipedia 😱](https://emojipedia.org/smileys)
+* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+* [Font Awesome](https://fontawesome.com)
+<br><br>
+* [Tailwind CSS](https://tailwindcss.com/docs/installation) - CSS framework
+<!--
+* []() - 
+-->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
