@@ -1,8 +1,12 @@
+'use client'
+
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import InputField from '@/components/forms/InputField';
 import SelectField from '@/components/forms/SelectField';
+
+import { INVESTMENT_GOALS, RISK_TOLERANCE_OPTIONS, PREFERRED_INDUSTRY_OPTIONS } from '@/lib/constants';
 
 const SignUp = () => {
   
@@ -61,12 +65,30 @@ const SignUp = () => {
       />
 
       <SelectField 
-        name='investment'
-        label='Investment'
+        name='investmentGoals'
+        label='Investment Goals'
         placeholder='Select your reason for investment'
-        options=''
+        options={INVESTMENT_GOALS}
         control={control}
-        error={errors.investment}
+        error={errors.investmentGoals}
+        required
+      />
+      <SelectField 
+        name='riskTolerance'
+        label='Risk Tolerance'
+        placeholder='How risky are you:'
+        options={RISK_TOLERANCE_OPTIONS}
+        control={control}
+        error={errors.riskTolerance}
+        required
+      />
+      <SelectField 
+        name='preferredIndustry'
+        label='Preferred Industry'
+        placeholder='Select your ideal industry'
+        options={PREFERRED_INDUSTRY_OPTIONS}
+        control={control}
+        error={errors.preferredIndustry}
         required
       />
 

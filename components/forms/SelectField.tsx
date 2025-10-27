@@ -18,11 +18,17 @@ const SelectField = ({ name, label, placeholder, options, control, error, requir
             <SelectTrigger className='select_trigger'>
               <SelectValue placeholder={placeholder}/>
             </SelectTrigger>
+            
             <SelectContent className='bg-gray-950 border-gray-800 text-white'>
-              <SelectItem value='light'>Light</SelectItem>
-              <SelectItem value='dark'>Dark</SelectItem>
-              <SelectItem value='system'>System</SelectItem>
+              {options.map((option) => (
+                <SelectItem value={option.value} key={option.value} className='focus:bg-green-800 focus:text-white'>
+                  {option.label}
+                </SelectItem>
+              ))}
             </SelectContent>
+
+            {error && <p className='text-red-500'>{error.message}</p>}
+
           </Select>
         )}
       />

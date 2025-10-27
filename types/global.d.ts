@@ -9,6 +9,9 @@ declare global {
     password: string;
     fullName: string;
     country: string;
+    investmentGoals: string;
+    riskTolerance: string;
+    preferredIndustry: string;
   }
 }
 
