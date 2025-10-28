@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import InputField from '@/components/forms/InputField';
 import SelectField from '@/components/forms/SelectField';
+import CountrySelectField from '@/components/forms/CountrySelectField';
 
 import { INVESTMENT_GOALS, RISK_TOLERANCE_OPTIONS, PREFERRED_INDUSTRY_OPTIONS } from '@/lib/constants';
 
@@ -63,6 +64,8 @@ const SignUp = () => {
         error={errors.password}
         validation={{ required: 'Password is required', minLength: 8}}
       />
+
+      <CountrySelectField />
 
       <SelectField 
         name='investmentGoals'

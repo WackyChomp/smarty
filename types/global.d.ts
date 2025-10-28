@@ -13,6 +13,16 @@ declare global {
     riskTolerance: string;
     preferredIndustry: string;
   }
+
+  interface SelectFieldProps{
+    name: string;
+    label: string;
+    placeholder: string;
+    control: Control;
+    options: readonly Option[];
+    error?: FieldError;
+    required?: boolean;
+  }
 }
 
 export {};
