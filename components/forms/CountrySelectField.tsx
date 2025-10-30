@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Select from 'react-select'
 import countryList from 'react-select-country-list'
 
-const CountrySelectField = () => {
+const CountrySelectField = ({ name, label, control, error, required}: ) => {
   const [value, setValue] = useState('')
   const options = useMemo(() => countryList().getData(), [])
 

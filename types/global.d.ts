@@ -23,6 +23,21 @@ declare global {
     error?: FieldError;
     required?: boolean;
   }
+
+  interface CountrySelectProps{
+    name: string;
+    label: string;
+    control: Control;
+    error?: FieldError;
+    required?: boolean;
+  };
+
+  interface FooterLinkProps{
+    text: string;
+    linkText: string;
+    href: string;
+  };
+
 }
 
 export {};
