@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import InputField from '@/components/forms/InputField';
 import SelectField from '@/components/forms/SelectField';
 import CountrySelectField from '@/components/forms/CountrySelectField';
+import FooterLink from '@/components/forms/FooterLink';
 
 import { INVESTMENT_GOALS, RISK_TOLERANCE_OPTIONS, PREFERRED_INDUSTRY_OPTIONS } from '@/lib/constants';
 
@@ -98,6 +99,8 @@ const SignUp = () => {
       <Button type='submit' disabled={isSubmitting} className='yellow_button w-full mt-5'>
         {isSubmitting ? 'Creating Account' : 'Commence Your Journey'}
       </Button>
+
+      <FooterLink text='Already have an account?' linkText='Sign In' href='/sign-in' />
     </form>
     </>
   )
