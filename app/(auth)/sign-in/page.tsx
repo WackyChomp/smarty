@@ -53,7 +53,7 @@ const SignIn = () => {
       </Button>
 
 
-      <FooterLink text='No account?' linkText='Sign Up' href='/sign-up' />
+      <FooterLink text='No account?' linkText='Create a new account!' href='/sign-up' />
     </>
   )
 }
