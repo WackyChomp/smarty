@@ -30,6 +30,7 @@
   <ol>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#contributing">Contributing</a></li>
   </ol>
 </details>
 
@@ -46,6 +47,20 @@ This section includes a list major frameworks/libraries used in this project:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- CONTRIBUTING -->
+## Contributing
+
+Have suggestions or ideas that would help improve this project? Go on ahead to fork the repo and create a pull request. 
+<br>
+✨Be sure to open an issue with the tag "enhancement" ✨
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->
