@@ -77,6 +77,8 @@ List of incredible resources that give you inspiration or point you into a direc
 * [Font Awesome](https://fontawesome.com)
 <br><br>
 * [Tailwind CSS](https://tailwindcss.com/docs/installation) - CSS framework
+* [Inngest](https://www.inngest.com/docs?ref=nav) - Monitor workflows and background jobs
+* [Gemini](https://gemini.google.com/app) - Google's Generative AI assistant
 <!--
 * []() - 
 -->
