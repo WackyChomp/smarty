@@ -33,5 +33,5 @@ export const getAuth = async() => {
 } 
 
 
-
+export const auth = await getAuth();
 
