@@ -38,6 +38,12 @@ declare global {
     href: string;
   };
 
+  interface WelcomeEmailData {
+    email: string;
+    name: string;
+    intro: string;
+  };
+
 }
 
 export {};

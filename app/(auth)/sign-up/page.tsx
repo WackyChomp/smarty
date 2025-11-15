@@ -9,9 +9,13 @@ import CountrySelectField from '@/components/forms/CountrySelectField';
 import FooterLink from '@/components/forms/FooterLink';
 
 import { INVESTMENT_GOALS, RISK_TOLERANCE_OPTIONS, PREFERRED_INDUSTRY_OPTIONS } from '@/lib/constants';
+import { signUpWithEmail } from '@/lib/actions/auth.actions';
+import { useRouter } from 'next/navigation';
+import { toast } from 'sonner';
 
 const SignUp = () => {
-  
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -30,9 +34,14 @@ const SignUp = () => {
 
   const onSubmit = async (data: SignUpFormData) => {
     try {
+      const result = await signUpWithEmail(data);
+      if(result.success) router.push('/');
       console.log(data)
     } catch (error) {
-      console.log(data)
+      console.error(error)
+      toast.error('Sign-Up failed :(', {
+        description: error instanceof Error ? error.message : 'Failed to create and acount'
+      })
     }
   }
 
@@ -66,7 +75,11 @@ const SignUp = () => {
         validation={{ required: 'Password is required', minLength: 8}}
       />
 
-      <CountrySelectField />
+      <CountrySelectField 
+        name='country smol man'
+        label='Country Big Man'
+        control={control}
+      />
 
       <SelectField 
         name='investmentGoals'
