@@ -44,6 +44,12 @@ declare global {
     intro: string;
   };
 
+  interface User{
+    id: string;
+    name: string;
+    email: string;
+  }
+
 }
 
 export {};
