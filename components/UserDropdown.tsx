@@ -16,11 +16,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { signOut } from '@/lib/actions/auth.actions'
 
 const UserDropdown = ({ user } : { user: User }) => {
   const router = useRouter();
 
   const handleSignOut = async() => {
+    await signOut();
     router.push('/sign-in')
   }
 
