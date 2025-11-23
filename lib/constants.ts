@@ -210,3 +210,46 @@ export const PREFERRED_INDUSTRY_OPTIONS = [
   { value: 'Healthcare', label: 'Healthcare' },
   { value: 'Technology', label: 'Technology' },
 ];
+
+
+export const POPULAR_STOCK_SYMBOLS = [
+  // Tech Giants (the big technology companies)
+  'AAPL',
+  'AMZN',
+  'GOOGL',
+  'META',
+  'MSFT',
+  'NFLX',
+  'NVDA',
+  'ORCL',
+  'TSLA',
+  
+  // Growing Tech Companies
+  'ADBE',
+  'AMD',
+  'ROKU',
+  'SPOT',
+  'SQ',
+  'SHOP',
+  'UBER',
+  'ZOOM',
+
+  // Newer Tech Companies
+  'COIN',
+  'CRWD',
+  'PLTR',
+  'RBLX',
+  'SNOW',
+  'TWLO',
+
+  // Consumer & Delivery Apps
+  'ABNB',
+  'DASH',
+  'LCID',
+  'LYFT',
+  'NIO',
+  'PINS',
+  'PTON',
+  'RIVN',
+  'SNAP',
+];
