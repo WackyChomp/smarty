@@ -50,6 +50,29 @@ declare global {
     email: string;
   }
 
+  
+  interface RawNewsArticle{
+    id: number;
+    headline?: string;
+    summary?: string;
+    image?: string;
+    datetime?: number;
+    category?: string;
+    related?: string;
+    source?: string;
+    url?: string;
+  };
+  interface Alert{
+    id: string;
+    symbol: string;
+    company: string;
+    alertName: string;
+    currentPrice: number;
+    alertType: 'upper' | 'lower';
+    threshold: number;
+    changePercent?: number;
+  };
+
 }
 
 export {};
