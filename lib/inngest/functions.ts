@@ -1,5 +1,5 @@
 import { inngest } from "@/lib/inngest/client"
-import { PERSONALIZED_WELCOME_EMAIL_PROMPT } from "./prompts"
+import { NEWS_SUMMARY_EMAIL_PROMPT, PERSONALIZED_WELCOME_EMAIL_PROMPT } from "./prompts"
 import { sendWelcomeEmail } from "../nodemailer"
 import { getAllUsersForNewsEmail } from "../actions/user.actions"
 import { getNews } from "../actions/finnhub.actions"
@@ -76,5 +76,28 @@ export const sendDailyNewsSummary = inngest.createFunction(
       }
         return perUser;
     });
+
+    // step 3
+    const userNewsSummaries: { user:User, newsContent:string|null}[] = [];
+    for(const{ user, articles } of results){
+      try {
+        const prompt = NEWS_SUMMARY_EMAIL_PROMPT.replace(`{{newsData}}`, JSON.stringify(articles, null, 2));
+
+        const response = await step.ai.infer(`summarize-news-${user.email}`, {
+          model: step.ai.models.gemini({ model: 'gemini-2.0-flash-lite'}),
+          body: {
+            contents: [{ role: 'user', parts:[{text.prommpt}] }]
+          }
+        })
+        const part = response.candidates?.[0]?.content?.parts?.[0];
+        const newsContent = (part && 'text' in part ? part.text : null) || 'No Market News'       // should rarely see this message
+
+        userNewsSummaries.push({ user, newsContent})
+      } catch (error) {
+        console.error('Failed to summarize news for: ' , user.email);
+        userNewsSummaries.push({ user, newsContent:null });
+      }
+    }
+
   }
 )
