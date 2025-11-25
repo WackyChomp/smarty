@@ -2,6 +2,8 @@ import { inngest } from "@/lib/inngest/client"
 import { PERSONALIZED_WELCOME_EMAIL_PROMPT } from "./prompts"
 import { sendWelcomeEmail } from "../nodemailer"
 import { getAllUsersForNewsEmail } from "../actions/user.actions"
+import { getNews } from "../actions/finnhub.actions"
+import { getWatchlistSymbolsByEmail } from "../actions/watchlist.actions"
 
 export const sendSignUpEmail = inngest.createFunction(
   { id: 'sign-up-email'},
@@ -53,5 +55,26 @@ export const sendDailyNewsSummary = inngest.createFunction(
     if(!users || users.length === 0) return { success: false, message: "No users found for news email" };
 
     // step 2
+    const results = await step.run('fetch-user-news', async () => {
+      const perUser: Array<{ user: UserForNewsEmail; articles: MarketNewsArticle[] }> = [];
+      for (const user of users as UserForNewsEmail[]) {
+        try {
+          const symbols = await getWatchlistSymbolsByEmail(user.email);
+          let articles = await getNews(symbols);
+          // Enforce max 6 articles per user
+          articles = (articles || []).slice(0, 6);
+          // If still empty, fallback to general
+          if (!articles || articles.length === 0) {
+            articles = await getNews();
+            articles = (articles || []).slice(0, 6);
+          }
+            perUser.push({ user, articles });
+        } catch (e) {
+          console.error('daily-news: error preparing user news', user.email, e);
+          perUser.push({ user, articles: [] });
+        }
+      }
+        return perUser;
+    });
   }
 )

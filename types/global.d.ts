@@ -73,6 +73,22 @@ declare global {
     changePercent?: number;
   };
 
+  interface MarketNewsArticle {
+    id: number;
+    headline: string;
+    summary: string;
+    source: string;
+    url: string;
+    datetime: number;
+    category: string;
+    related: string;
+    image?: string;
+  };
+
+  interface WatchlistNewsProps {
+    news?: MarketNewsArticle[];
+  };
+
 }
 
 export {};
