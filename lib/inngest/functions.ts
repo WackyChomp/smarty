@@ -1,9 +1,10 @@
 import { inngest } from "@/lib/inngest/client"
 import { NEWS_SUMMARY_EMAIL_PROMPT, PERSONALIZED_WELCOME_EMAIL_PROMPT } from "./prompts"
-import { sendWelcomeEmail } from "../nodemailer"
+import { sendNewsSummaryEmail, sendWelcomeEmail } from "../nodemailer"
 import { getAllUsersForNewsEmail } from "../actions/user.actions"
 import { getNews } from "../actions/finnhub.actions"
 import { getWatchlistSymbolsByEmail } from "../actions/watchlist.actions"
+import { formatDateToday } from "../utils"
 
 export const sendSignUpEmail = inngest.createFunction(
   { id: 'sign-up-email'},
@@ -99,5 +100,15 @@ export const sendDailyNewsSummary = inngest.createFunction(
       }
     }
 
+    // Step 4
+    await step.run('send-news-emails', async() => {
+      await Promise.all(
+        userNewsSummaries.map(async ({ user, newsContent }) => {
+          if(!newsContent) return false;
+
+          return await sendNewsSummaryEmail({email:user.email, date:formatDateToday, newsContent})
+        })
+      )
+    })
   }
 )
